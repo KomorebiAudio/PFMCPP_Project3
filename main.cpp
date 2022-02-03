@@ -35,69 +35,65 @@ Part1 will be broken up into 5 separate steps, all on the same branch.
 /*
 Part 1a
 1) Look at the picture of the car interior (Part1a pic.jpg).  
-    It's in the list of files on the left in Replit.
-    Fill in the blanks below which break this car interior down 
-    into sub-objects.
+    Fill in the blanks below which break this car interior down into sub-objects.
 
-Several sub-objects are listed below that make up this car's interior.
-    you're going to name several things that you'll find on each 
-    subobject.
-    you're going to name several things that each subobject can do.
-    If you've seen "Family Feud", we are going to do what they do 
-    in that show.
+    Several sub-objects are listed below that make up this car's interior.
+        you're going to name several things that you'll find on each subobject
+        you're going to name several things that each subobject can do.
+        If you've seen "Family Feud", we are going to do what they do in that show
 
-    A few blanks are filled in for you already.
+        A few blanks are filled in for you already.
 
 Main Object: Car Interior
 Sub Object 1: Steering Wheel
     Name 4 things you'll find on the:    Steering Wheel
         1) paddle shifters
         2) 'cruise control' controls
-        3) 
-        4) 
+        3) horn
+        4) volume control
     Name 2 things you can do with the:   Steering Wheel
         1) adjust cruise control settings.
-        2)
+        2) beep the horn
         
 Sub Object 2: Instrument Cluster
     Name 4 things you'll find on the:   Instrument Cluster
-        1)
-        2)
-        3)
-        4)
+        1) speed dial
+        2) gear display
+        3) temperature display
+        4) rpm dial
     Name 3 things you can do with the:   Instrument Cluster
-        1)
-        2)
-        3)
+        1) see your current speed
+        2) see the current rpm
+        3) see the temperature
     
 Sub Object 3: Environment Controls
     Name 3 things you'll find on the:    Environment Controls
-        1)
-        2)
-        3)
+        1) air conditioning button
+        2) temperature control
+        3) airflow control
     Name 3 things you can do with the:   Environment Controls
-        1)
-        2)
-        3)
+        1) change the temperature
+        2) change the airflow
+        3) turn on the air conditioning
 
 Sub Object 4: Infotainment System
     Name 3 things you'll find on the:    Infotainment System
-        1)
-        2)
-        3)
+        1) radio button
+        2) phone call button
+        3) phone hang up button
     Name 3 things you can do with the:   Infotainment System
-        1)
-        2)
-        3)
+        1) turn on the radio
+        2) make a phone call
+        3) hang up the phone
 
 Sub Object 5: Seat 
     Name 3 things you'll find on the:    Seat
-        1)
-        2)
-        3)
+        1) arm rest 
+        2) incline adjustment 
+        3) head rest
     Name 2 things you can do with the:   Seat
-        1)
-        2)
+        1) sit on it
+        2) adjust the angle
 */
 
 /*
@@ -153,59 +149,59 @@ Part 1b Assignment:
 */
 
 /*
-Thing 1)
+Thing 1) Airport
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of take offs
+    2) number of landings
+    3) amount of revenue taken per week
+    4) amount of overpriced sandwiches sold
+    5) amount of electricity used
 3 things it can do:
-    1)
-    2)
-    3)
+    1) check in passengers
+    2) store planes
+    3) sell overpriced food
  */
 
 /*
-Thing 2)
+Thing 2) Elevator
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of buttons
+    2) metres travelled per day
+    3) number of floors it can go to
+    4) speed at which it travels
+    5) time it takes the doors to close
 3 things it can do:
-    1)
-    2)
-    3)
+    1) go up
+    2) go down
+    3) open doors
  */
 
 /*
-Thing 3)
+Thing 3) car
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) how long to go from 0 to 60
+    2) number of doors
+    3) number of wheels
+    4) amount of gears does it have
+    5) amount of miles per gallon
 3 things it can do:
-    1)
-    2)
-    3)
+    1) accelerate
+    2) brake 
+    3) change gear
  */
 
 /*
-Thing 4)
+Thing 4) bird
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of wings
+    2) number of feathers
+    3) number of eyes
+    4) number of feet
+    5) weight of the bird
 3 things it can do:
-    1)
-    2)
-    3)
+    1) fly
+    2) build nest
+    3) lay eggs 
  */
 
  /*
@@ -275,17 +271,18 @@ Part 1c assignment:
 */
 
 /*
-Thing 10)
+Thing 10) Bicycle
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Saddle 
+    2) Gears
+    3) Frame
+    4) Wheels
+    5) Bell
+
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Rotate pedals
+    2) Adjust saddle height
+    3) Change gears
  */
 
 /*
@@ -375,73 +372,75 @@ each property for UDTs 5 - 9.
 */
 
 /*
-Thing 5)
+Thing 5) Saddle
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) amount of cushioning (int)
+    2) width in cm (int)
+    3) height in cm (int)
+    4) colour (int)
+    5) weight in kg (double)
+    
 3 things it can do:
-    1)
-    2)
-    3)
+    1) support rider
+    2) cushion butt
+    3) look cool
  */
 
 /*
-Thing 6)
+Thing 6) Gears
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of gears (int)
+    2) length of chain in cm (int)
+    3) size of derailer in cm (int)
+    4) number of drives (int)
+    5) type of drive (char)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) change between speeds
+    2) derail chain
+    3) rotate forwards
  */
 
 /*
-Thing 7)
+Thing 7) Frame 
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) length of top tube in cm (int)
+    2) weight of frame in kg (double)
+    3) length of down tube in cm (int)
+    4) number of forks (int)
+    5) length of bottom bracket in cm (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) hold wheels in place
+    2) connect to saddle
+    3) route brake cables
  */
 
 /*
-Thing 8)
+Thing 8) Wheels
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) tire psi (double)
+    2) rim circumerence in cm (int)
+    3) number of spokes (int)
+    4) tire tread in mm (int)
+    5) brand of tire int (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1) rotate forwards
+    2) change direction
+    3) rotate backwards
  */
 
 /*
-Thing 9)
+Thing 9) Bell
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Loudness in Db (float)
+    2) Width in cm (int)
+    3) Heigh in cm int
+    4) Weight in lb and oz (float)
+    5) Number of moving parts (int)
+
 3 things it can do:
-    1)
-    2)
-    3)
+    1) make sound
+    2) shine in the sun
+    3) rotate clockwise
  */
 
 /*
