@@ -148,64 +148,6 @@ Part 1b Assignment:
         'int float double bool char std::string'.
 */
 
-/*
-Thing 1) Airport
-5 properties:
-    1) number of take offs (int)
-    2) number of landings (int)
-    3) amount of revenue taken per week in GBP (double)
-    4) amount of overpriced sandwiches sold (int)
-    5) amount of electricity used in kWh (float)
-
-3 things it can do:
-    1) check in passengers
-    2) store planes
-    3) sell overpriced food
- */
-
-/*
-Thing 2) Elevator
-5 properties:
-    1) number of buttons  (int)
-    2) metres travelled per day (int)
-    3) number of floors it can go to (int)
-    4) speed at which it travels in MPH (int)
-    5) time it takes the doors to close in seconds (double)
-3 things it can do:
-    1) go up
-    2) go down
-    3) open doors
- */
-
-/*
-Thing 3) car
-5 properties:
-    1) how long to go from 0 to 60 in seconds (doub;e)
-    2) number of doors (int)
-    3) number of wheels (int)
-    4) amount of gears (int)
-    5) amount of miles per gallon (double)
-
-3 things it can do:
-    1) accelerate
-    2) brake 
-    3) change gear
- */
-
-/*
-Thing 4) bird
-5 properties:
-    1) number of wings (int)
-    2) number of feathers (int)
-    3) number of eyes (int)
-    4) number of feet (int)
-    5) weight of the bird in kg (double)
-3 things it can do:
-    1) fly
-    2) build nest
-    3) lay eggs 
- */
-
  /*
 Part 1c
 You have just finished practicing writing out a UDT that is has 
@@ -271,21 +213,6 @@ Part 1c assignment:
             area in cm2 (int)
             brand (std::string)
 */
-
-/*
-Thing 10) Bicycle
-5 properties: 
-    1) Saddle 
-    2) Gears
-    3) Size of frame
-    4) Wheels
-    5) Bell
-
-3 things it can do:
-    1) Rotate pedals
-    2) Adjust saddle height
-    3) Change gears
- */
 
 /*
 Part 1d
@@ -372,81 +299,6 @@ each property for UDTs 5 - 9.
             width in cm (int)
             height in cm (int)
 */
-
-/*
-Thing 5) Saddle
-5 properties:
-    1) amount of cushioning (int)
-    2) width in cm (int)
-    3) height in cm (int)
-    4) colour (int)
-    5) weight in kg (double)
-    
-3 things it can do:
-    1) support rider
-    2) cushion butt
-    3) look cool
- */
-
-/*
-Thing 6) Gears
-5 properties:
-    1) number of gears (int)
-    2) length of chain in cm (int)
-    3) size of derailer in cm (int)
-    4) number of drives (int)
-    5) type of drive (char)
-
-3 things it can do:
-    1) change between speeds
-    2) derail chain
-    3) rotate forwards
- */
-
-/*
-Thing 7) Frame 
-5 properties:
-    1) length of top tube in cm (int)
-    2) weight of frame in kg (double)
-    3) length of down tube in cm (int)
-    4) number of forks (int)
-    5) length of bottom bracket in cm (int)
-
-3 things it can do:
-    1) hold wheels in place
-    2) connect to saddle
-    3) route brake cables
- */
-
-/*
-Thing 8) Wheels
-5 properties:
-    1) tire psi (double)
-    2) rim circumerence in cm (int)
-    3) number of spokes (int)
-    4) tire tread in mm (int)
-    5) brand of tire int (int)
-
-3 things it can do:
-    1) rotate forwards
-    2) change direction
-    3) rotate backwards
- */
-
-/*
-Thing 9) Bell
-5 properties:
-    1) Loudness in Db (float)
-    2) Width in cm (int)
-    3) Heigh in cm (int)
-    4) Weight in lb and oz (float)
-    5) Number of moving parts (int)
-
-3 things it can do:
-    1) make sound
-    2) shine in the sun
-    3) rotate clockwise
- */
 
 /*
 You've just defined 10 UDTs!
