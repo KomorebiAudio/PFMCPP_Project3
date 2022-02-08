@@ -188,157 +188,287 @@ struct CarWash //                                   1) define an empty struct fo
 
 /*
 Thing 1) Airport
-5 properties:
-    1) number of take offs (int)
-    2) number of landings (int)
-    3) amount of revenue taken per week in GBP (double)
-    4) amount of overpriced sandwiches sold (int)
-    5) amount of electricity used in kWh (float)
 
-3 things it can do:
-    1) check in passengers
-    2) store planes
-    3) sell overpriced food
  */
+struct Airport 
+{
+//5 properties:
+    //1) number of take offs 
+    int numTakeOffs = 3;
+    //2) number of landings (int)
+    int numLandings = 4;
+    //3) amount of revenue taken per week in GBP (float)
+    float revenuePerWeek = 345.f;
+    //4) amount of overpriced sandwiches sold (int)
+    int sandwichesSold = 200;
+    //5) amount of electricity used in kWh (float)
+    float energyUsed = 213.45f;
 
-/*
-Thing 2) Elevator
-5 properties:
-    1) number of buttons  (int)
-    2) metres travelled per day (int)
-    3) number of floors it can go to (int)
-    4) speed at which it travels in MPH (int)
-    5) time it takes the doors to close in seconds (double)
-3 things it can do:
-    1) go up
-    2) go down
-    3) open doors
- */
+struct Aeroplane
+{
+    int numWheels = 3;
+    float gasMileage = 15.4f;        
+    int year = 2016;
+    std::string manufacturer = "Boeing";
+    std::string model = "747";
+};
 
-/*
-Thing 3) car
-5 properties:
-    1) how long to go from 0 to 60 in seconds (doub;e)
-    2) number of doors (int)
-    3) number of wheels (int)
-    4) amount of gears (int)
-    5) amount of miles per gallon (double)
+//3 things it can do:
 
-3 things it can do:
-    1) accelerate
-    2) brake 
-    3) change gear
- */
+    //1) check in passengers
 
-/*
-Thing 4) bird
-5 properties:
-    1) number of wings (int)
-    2) number of feathers (int)
-    3) number of eyes (int)
-    4) number of feet (int)
-    5) weight of the bird in kg (double)
-3 things it can do:
-    1) fly
-    2) build nest
-    3) lay eggs 
+    //2) store planes
 
-/*
-Thing 5) Saddle
-5 properties:
-    1) amount of cushioning (int)
-    2) width in cm (int)
-    3) height in cm (int)
-    4) colour (int)
-    5) weight in kg (double)
+    //3) sell overpriced food
     
-3 things it can do:
-    1) support rider
-    2) cushion butt
-    3) look cool
- */
-
+};
 /*
-Thing 6) Gears
-5 properties:
-    1) number of gears (int)
-    2) length of chain in cm (int)
-    3) size of derailer in cm (int)
-    4) number of drives (int)
-    5) type of drive (char)
 
-3 things it can do:
-    1) change between speeds
-    2) derail chain
-    3) rotate forwards
  */
+struct Elevator 
+{
+//Thing 2) Elevator
+//5 properties:
+    //1) number of buttons  (int)
+    int numButtons = 2;
+    //2) metres travelled per day (float)
+    float metresTravelled = 424.f;
+    //3) number of floors it can go to (int)
+    int numFloors = 9;
+    //4) speed at which it travels in MPH (int)
+    int speedMPH = 60;
+    //5) time it takes the doors to close in seconds (double)
+    double speedDoorsClose = 1.6; 
 
+struct elevatorDoors
+{
+int doorHeight = 220;
+int doorWidth = 160;
+double doorWeight = 10.1;
+std::string brand = "WeLift";
+std::string holdingCompanyName = "TaxHavenLLC";
+};
+
+//3 things it can do:
+    //1) go up
+    //2) go down
+    //3) open doors
+};
+/*
+
+ */
+struct motorbike
+{
+//5 properties:
+    //1) how long to go from 0 to 60 in seconds (double)
+    double timeToReach60 = 9.8;
+    //2) number of doors (int)
+    int numDoors = 5;
+    //3) number of wheels (int)
+    int numWheels = 4;
+    //4) number of gears (int)
+    int numGears = 6;
+    //5) amount of miles per gallon (double)
+    double milesPerGallon = 45.6;
+
+struct Wheels
+{
+    int rimWeight = 991;
+    int rimSize = 119;
+    std::string rimMake = "Suzuki";
+    std::string tireMake = "Michelin";
+    bool tireIsFull = true;
+};
+//3 things it can do:
+    //1) accelerate
+    //2) brake 
+    //3) change gear
+}; 
+/*
+
+*/
+struct bird
+{
+//Thing 4) bird
+//5 properties:
+    //1) number of wings (int)
+    int numWings = 2;
+    //2) have feathers (bool)
+    bool hasFeathers = true;
+    //3) number of eyes (int)
+    int numEyes = 2;
+    //4) number of feet (int)
+    int numFeet = 2;
+    //5) weight of the bird in kg (double)
+    double birdWeight = 4.3;
+struct beak 
+{
+    int beakLength = 10;
+    std::string beakColour = "Yellow";
+    std::string beakStyle = "Slim";
+    double beakWeight = 2.2;
+    bool hasNostrils = true;
+};
+//3 things it can do:
+    //1) fly
+    //2) build nest
+    //3) lay eggs 
+};
+/*
+
+ */
+struct Saddle 
+{
+//Thing 5) Saddle
+//5 properties:
+    //1) amount of cushioning (int)
+    int cushionAmount = 3;
+    //2) width in cm (int)
+    int saddleWidth = 5;
+    //3) height in cm (int)
+    int saddleHeight = 3;
+    //4) colour (int)
+    int colour = 222;
+    //5) weight in kg (double)
+    double saddleWeight = 4.5;
+
+struct saddleMaterial
+{
+    bool isLeather = true;
+    bool isTan = true;
+    std::string leatherSource = "Cow";
+   
+    
+//3 things it can do:
+    //1) support rider
+    //2) cushion butt
+    //3) look cool
+};
+/*
+
+ */
+struct Gears
+{
+//Thing 6) Gears
+//5 properties:
+    //1) number of gears (int)
+    int numGears = 18;
+    //2) length of chain in cm (int)
+    int chainLength = 100;
+    //3) size of derailer in cm (int)
+    int derailerSize = 222;
+    //4) number of drives (int)
+    int numDrives = 10;
+    //5) type of drive (float)
+    float driveType = 6.5f;
+
+struct Sprocket
+{
+std::string colour = "silver";
+std::string material = "titanium";
+int movingParts = 18;
+float sprocketWeight = 4.8f;
+};
+
+//3 things it can do:
+    //1) change between speeds
+    //2) derail chain
+    //3) rotate forwards
+};
 /*
 Thing 7) Frame 
-5 properties:
-    1) length of top tube in cm (int)
-    2) weight of frame in kg (double)
-    3) length of down tube in cm (int)
-    4) number of forks (int)
-    5) length of bottom bracket in cm (int)
 
-3 things it can do:
-    1) hold wheels in place
-    2) connect to saddle
-    3) route brake cables
  */
+struct Frame
+{
+//5 properties:
+    //1) length of top tube in cm (int)
+    int toptubeLength = 99;
+    //2) weight of frame in kg (double)
+    double frameWeight = 7.7;
+    //3) length of down tube in cm (int)
+    int downtubeLength = 50;
+    //4) number of forks (int)
+    int numForks = 2;
+    //5) length of bottom bracket in cm (int)
+    int bottomBracketLength = 789;
 
+};    
+   
+
+//3 things it can do:
+    //1) hold wheels in place
+    //2) connect to saddle
+    //3) route brake cables
+};
 /*
-Thing 8) Wheels
-5 properties:
-    1) tire psi (double)
-    2) rim circumerence in cm (int)
-    3) number of spokes (int)
-    4) tire tread in mm (int)
-    5) brand of tire int (int)
 
-3 things it can do:
-    1) rotate forwards
-    2) change direction
-    3) rotate backwards
  */
-
+struct Wheels
+{
+//Thing 8) Wheels
+//5 properties:
+    //1) tire psi (double)
+    double tirePSI = 45.6;
+    //2) rim circumerence in cm (int)
+    int rimCircumference = 123;
+    //3) number of spokes (int)
+    int numSpokes = 32;
+    //4) tire tread in mm (float)
+    float tireTread = 2.2f;
+    //5) brand of tire int (int)
+    int tireBrand = 1664;
+//3 things it can do:
+    //1) rotate forwards
+    //2) change direction
+    //3) rotate backwards
+};
 /*
 Thing 9) Bell
-5 properties:
-    1) Loudness in Db (float)
-    2) Width in cm (int)
-    3) Heigh in cm (int)
-    4) Weight in lb and oz (float)
-    5) Number of moving parts (int)
 
-3 things it can do:
-    1) make sound
-    2) shine in the sun
-    3) rotate clockwise
  */
+struct Bell
+{
+//5 properties:
+    //1) Loudness in Db (float)
+    float bellLoudness = 92.2f;
+    //2) Width in cm (int)
+    int bellWidth = 22;
+    //3) Height in cm (int)
+    int bellHeight = 23;
+    //4) Weight in lb and oz (float)
+    float bellWeight = 6.f;
+    //5) Number of moving parts (int)
+    int numMovingParts = 54;
 
+//3 things it can do:
+    //1) make sound
+    //2) shine in the sun
+    //3) rotate clockwise
+};
 /*
-Thing 10) Bicycle
-5 properties: 
-    1) Saddle 
-    2) Gears
-    3) Size of frame
-    4) Wheels
-    5) Bell
 
-3 things it can do:
-    1) Rotate pedals
-    2) Adjust saddle height
-    3) Change gears
  */
+struct Bicycle
+{
+//Thing 10) Bicycle
+//5 properties: 
+    //1) Saddle 
+    //2) Gears
+    //3) Size of frame
+    //4) Wheels
+    //5) Bell
+
+//3 things it can do:
+    //1) Rotate pedals
+    //2) Adjust saddle height
+    //3) Change gears
+};
 
 
-The next thing that will happen is that I will review the 
-pseudo-code that you have written.
-Send me a DM to review your pull request when the project is ready for review.
-*/
-
+//The next thing that will happen is that I will review the 
+//pseudo-code that you have written.
+//Send me a DM to review your pull request when the //project is ready for review.
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
