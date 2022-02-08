@@ -190,18 +190,19 @@ struct CarWash //                                   1) define an empty struct fo
 Thing 1) Airport
 
  */
-struct Airport 
-{
 //5 properties:
     //1) number of take offs 
-    int numTakeOffs = 3;
     //2) number of landings (int)
-    int numLandings = 4;
     //3) amount of revenue taken per week in GBP (float)
-    float revenuePerWeek = 345.f;
     //4) amount of overpriced sandwiches sold (int)
-    int sandwichesSold = 200;
     //5) amount of electricity used in kWh (float)
+
+struct Airport 
+{
+    int numTakeOffs = 3;
+    int numLandings = 4;
+    float revenuePerWeek = 345.f;
+    int sandwichesSold = 200;
     float energyUsed = 213.45f;
 
 struct Aeroplane
@@ -216,37 +217,37 @@ struct Aeroplane
 //3 things it can do:
 
     //1) check in passengers
-
     //2) store planes
-
     //3) sell overpriced food
     
 };
 /*
 
  */
-struct Elevator 
-{
+
 //Thing 2) Elevator
+
 //5 properties:
     //1) number of buttons  (int)
-    int numButtons = 2;
     //2) metres travelled per day (float)
-    float metresTravelled = 424.f;
     //3) number of floors it can go to (int)
-    int numFloors = 9;
     //4) speed at which it travels in MPH (int)
-    int speedMPH = 60;
     //5) time it takes the doors to close in seconds (double)
+    struct Elevator 
+{
+    int numButtons = 2;
+    float metresTravelled = 424.f;
+    int numFloors = 9;
+    int speedMPH = 60;
     double speedDoorsClose = 1.6; 
 
 struct elevatorDoors
 {
-int doorHeight = 220;
-int doorWidth = 160;
-double doorWeight = 10.1;
-std::string brand = "WeLift";
-std::string holdingCompanyName = "TaxHavenLLC";
+    int doorHeight = 220;
+    int doorWidth = 160;
+    double doorWeight = 10.1;
+    std::string brand = "WeLift";
+    std::string holdingCompanyName = "TaxHavenLLC";
 };
 
 //3 things it can do:
@@ -257,18 +258,22 @@ std::string holdingCompanyName = "TaxHavenLLC";
 /*
 
  */
-struct motorbike
-{
+
+// Thing 2
+
 //5 properties:
     //1) how long to go from 0 to 60 in seconds (double)
-    double timeToReach60 = 9.8;
     //2) number of doors (int)
-    int numDoors = 5;
     //3) number of wheels (int)
-    int numWheels = 4;
     //4) number of gears (int)
-    int numGears = 6;
     //5) amount of miles per gallon (double)
+    
+struct motorbike
+{
+    double timeToReach60 = 9.8;
+    int numDoors = 5;
+    int numWheels = 4;
+    int numGears = 6;
     double milesPerGallon = 45.6;
 
 struct Wheels
@@ -279,6 +284,7 @@ struct Wheels
     std::string tireMake = "Michelin";
     bool tireIsFull = true;
 };
+
 //3 things it can do:
     //1) accelerate
     //2) brake 
@@ -290,17 +296,20 @@ struct Wheels
 struct bird
 {
 //Thing 4) bird
+
 //5 properties:
     //1) number of wings (int)
-    int numWings = 2;
     //2) have feathers (bool)
-    bool hasFeathers = true;
     //3) number of eyes (int)
-    int numEyes = 2;
     //4) number of feet (int)
-    int numFeet = 2;
     //5) weight of the bird in kg (double)
+
+    int numWings = 2;
+    bool hasFeathers = true;
+    int numEyes = 2;
+    int numFeet = 2;
     double birdWeight = 4.3;
+
 struct beak 
 {
     int beakLength = 10;
@@ -309,6 +318,7 @@ struct beak
     double beakWeight = 2.2;
     bool hasNostrils = true;
 };
+
 //3 things it can do:
     //1) fly
     //2) build nest
@@ -317,19 +327,22 @@ struct beak
 /*
 
  */
-struct Saddle 
-{
+
 //Thing 5) Saddle
+
 //5 properties:
     //1) amount of cushioning (int)
-    int cushionAmount = 3;
     //2) width in cm (int)
-    int saddleWidth = 5;
     //3) height in cm (int)
-    int saddleHeight = 3;
     //4) colour (int)
-    int colour = 222;
     //5) weight in kg (double)
+
+    struct Saddle 
+{
+    int cushionAmount = 3;
+    int saddleWidth = 5;
+    int saddleHeight = 3;
+    int colour = 222;
     double saddleWeight = 4.5;
 
 struct saddleMaterial
@@ -337,6 +350,7 @@ struct saddleMaterial
     bool isLeather = true;
     bool isTan = true;
     std::string leatherSource = "Cow";
+};    
    
     
 //3 things it can do:
@@ -347,27 +361,29 @@ struct saddleMaterial
 /*
 
  */
-struct Gears
-{
+
 //Thing 6) Gears
 //5 properties:
     //1) number of gears (int)
-    int numGears = 18;
     //2) length of chain in cm (int)
-    int chainLength = 100;
     //3) size of derailer in cm (int)
-    int derailerSize = 222;
     //4) number of drives (int)
-    int numDrives = 10;
     //5) type of drive (float)
+
+struct Gears
+{
+    int numGears = 18;
+    int chainLength = 100;
+    int derailerSize = 222;
+    int numDrives = 10;
     float driveType = 6.5f;
 
 struct Sprocket
 {
-std::string colour = "silver";
-std::string material = "titanium";
-int movingParts = 18;
-float sprocketWeight = 4.8f;
+    std::string colour = "silver";
+    std::string material = "titanium";
+    int movingParts = 18;
+    float sprocketWeight = 4.8f;
 };
 
 //3 things it can do:
@@ -375,27 +391,35 @@ float sprocketWeight = 4.8f;
     //2) derail chain
     //3) rotate forwards
 };
+
 /*
 Thing 7) Frame 
-
  */
-struct Frame
-{
+
 //5 properties:
     //1) length of top tube in cm (int)
-    int toptubeLength = 99;
     //2) weight of frame in kg (double)
-    double frameWeight = 7.7;
     //3) length of down tube in cm (int)
-    int downtubeLength = 50;
-    //4) number of forks (int)
-    int numForks = 2;
+    //4) number of forks (int) 
     //5) length of bottom bracket in cm (int)
+
+    struct Frame
+{
+    int toptubeLength = 99;
+    double frameWeight = 7.7;
+    int downtubeLength = 50;
+    int numForks = 2;
     int bottomBracketLength = 789;
 
-};    
-   
-
+ struct headtube
+ {
+    int frontFrameLength = 10;
+    std::string brand = "Slazenger";
+    int bottomFileCircumference = 30;
+    double compressionRingDiameter = 28.6;
+    bool hasLid = true;
+};
+  
 //3 things it can do:
     //1) hold wheels in place
     //2) connect to saddle
@@ -404,20 +428,32 @@ struct Frame
 /*
 
  */
-struct Wheels
-{
+
 //Thing 8) Wheels
 //5 properties:
     //1) tire psi (double)
-    double tirePSI = 45.6;
     //2) rim circumerence in cm (int)
-    int rimCircumference = 123;
     //3) number of spokes (int)
-    int numSpokes = 32;
     //4) tire tread in mm (float)
-    float tireTread = 2.2f;
     //5) brand of tire int (int)
+
+ struct Wheels
+{   
+    double tirePSI = 45.6;
+    int rimCircumference = 123;
+    int numSpokes = 32;
+    float tireTread = 2.2f;
     int tireBrand = 1664;
+    
+struct wheelHub
+{
+    int axelLength = 121;
+    int axelDiameter = 12;
+    double axelWeight = 0.3;
+    std::string axelBrand = "RXR";
+    bool hasSpring = true;
+};
+
 //3 things it can do:
     //1) rotate forwards
     //2) change direction
@@ -431,26 +467,39 @@ struct Bell
 {
 //5 properties:
     //1) Loudness in Db (float)
-    float bellLoudness = 92.2f;
     //2) Width in cm (int)
-    int bellWidth = 22;
     //3) Height in cm (int)
-    int bellHeight = 23;
     //4) Weight in lb and oz (float)
-    float bellWeight = 6.f;
     //5) Number of moving parts (int)
+
+    float bellLoudness = 92.2f;
+    int bellWidth = 22;
+    int bellHeight = 23;
+    float bellWeight = 6.f;
     int numMovingParts = 54;
+
+struct bellBase
+{
+    int baseWidth = 3;
+    std::string baseMaterial = "Rubber";
+    std::string baseColour = "Black";
+    double baseWeight = 1.1;
+};
 
 //3 things it can do:
     //1) make sound
     //2) shine in the sun
     //3) rotate clockwise
 };
+
+//Thing 10
 /*
 
  */
+ 
 struct Bicycle
 {
+
 //Thing 10) Bicycle
 //5 properties: 
     //1) Saddle 
