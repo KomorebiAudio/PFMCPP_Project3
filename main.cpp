@@ -122,7 +122,9 @@ struct CarWash //                                   1) define an empty struct fo
         //the parameter name is related to the work the function will perform.
         void fillTank(double fuelAmountInGallons = 2.0);  
         void breakDown(std::string failureType, bool requiresTow = false);
-        int getMilesTraveledAnnually(bool includeUberLyftTrips); //3) returns the number of miles traveled
+        int getMilesTraveledAnnually(bool includeUberLyftTrips);
+        
+        //3) returns the number of miles traveled
     };
 
     //wash and wax car
@@ -293,8 +295,6 @@ struct Wheels
 /*
 
 */
-struct bird
-{
 //Thing 4) bird
 
 //5 properties:
@@ -304,6 +304,8 @@ struct bird
     //4) number of feet (int)
     //5) weight of the bird in kg (double)
 
+struct bird
+{
     int numWings = 2;
     bool hasFeathers = true;
     int numEyes = 2;
@@ -317,12 +319,22 @@ struct beak
     std::string beakStyle = "Slim";
     double beakWeight = 2.2;
     bool hasNostrils = true;
+
+    void eatSeed (int seedAmount = 10);
+    int getMilesFlownDaily (bool includeElevationGain = true);
+
+    void takeBirdBath (bird birdA);
+    void cleanFeathers (bird birdA);
 };
 
 //3 things it can do:
     //1) fly
     //2) build nest
     //3) lay eggs 
+
+     void flyInSky (bird C);
+     void buildNest (bird C, bool hasEnoughTwigs = true);
+     void layEggs (bird C, int dailyCalciumIntage = 2, bool isHappy = true);
 };
 /*
 
