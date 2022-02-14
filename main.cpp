@@ -120,7 +120,8 @@ struct CarWash //                                   1) define an empty struct fo
 
         //3) a member function whose parameter has a default value.
         //the parameter name is related to the work the function will perform.
-        void fillTank(double fuelAmountInGallons = 2.0);  
+        
+        void fillTank(double fuelAmountInGallons = 2.0);
         void breakDown(std::string failureType, bool requiresTow = false);
         int getMilesTraveledAnnually(bool includeUberLyftTrips);
         
@@ -243,6 +244,16 @@ struct Elevator
     int speedMPH = 60;
     double speedDoorsClose = 1.6; 
 
+//3 things it can do:
+
+    //1) go up
+    void goUp ();
+    //2) go down
+    void goDown ();
+    //3) open doors
+    bool doorsOpen ();
+    // returns true or false
+
     struct ElevatorDoors
     {
         int doorHeight = 220;
@@ -252,10 +263,6 @@ struct Elevator
         std::string holdingCompanyName = "TaxHavenLLC";
     };
 
-//3 things it can do:
-    //1) go up
-    //2) go down
-    //3) open doors
 };
 
 /*
@@ -279,19 +286,15 @@ struct Motorbike
     int numGears = 6;
     double milesPerGallon = 45.6;
 
-    struct Wheels
-    {
-        int rimWeight = 991;
-        int rimSize = 119;
-        std::string rimMake = "Suzuki";
-        std::string tireMake = "Michelin";
-        bool tireIsFull = true;
-    };
-
 //3 things it can do:
+
     //1) accelerate
+    void accelerate ();
     //2) brake 
+    void brake ();
     //3) change gear
+    void changeGear ();
+
 }; 
 /*
 
@@ -313,29 +316,14 @@ struct Bird
     int numFeet = 2;
     double birdWeight = 4.3;
 
-    struct Beak 
-    {
-        int beakLength = 10;
-        std::string beakColour = "Yellow";
-        std::string beakStyle = "Slim";
-        double beakWeight = 2.2;
-        bool hasNostrils = true;
-
-        void eatSeed (int seedAmount = 10);
-        int getMilesFlownDaily (bool includeElevationGain = true);
-
-        void takeBirdBath (Bird birdA);
-        void cleanFeathers (Bird birdA);
-    };
-
 //3 things it can do:
-    //1) fly
-    //2) build nest
-    //3) lay eggs 
 
-    void flyInSky (Bird C);
-    void buildNest (Bird C, bool hasEnoughTwigs = true);
-    void layEggs (Bird C, int dailyCalciumIntake = 2, bool isHappy = true);
+    //1) fly
+    void flyInSky();
+    //2) build nest
+    void buildNest();
+    //3) lay eggs 
+    bool layEggs();
 };
 
 /*
@@ -358,19 +346,21 @@ struct Saddle
     int saddleHeight = 3;
     int colour = 222;
     double saddleWeight = 4.5;
+    
+//3 things it can do:
+    //1) support rider
+    void supportRider();
+    //2) cushion butt
+    void cushionButt();
+    //3) look cool
+    void lookCool();
 
-    struct SaddleMaterial
+        struct SaddleMaterial
     {
         bool isLeather = true;
         bool isTan = true;
         std::string leatherSource = "Cow";
     };    
-
-    
-//3 things it can do:
-    //1) support rider
-    //2) cushion butt
-    //3) look cool
 };
 /*
 
@@ -392,18 +382,15 @@ struct Gears
     int numDrives = 10;
     float driveType = 6.5f;
 
-    struct Sprocket
-    {
-        std::string colour = "silver";
-        std::string material = "titanium";
-        int movingParts = 18;
-        float sprocketWeight = 4.8f;
-    };
-
 //3 things it can do:
+
     //1) change between speeds
+    void changeBetweenSpeeds();
     //2) derail chain
+    void derailChain();
     //3) rotate forwards
+    int rotateForwards();
+    // return number of rotations
 };
 
 /*
@@ -424,20 +411,14 @@ struct Frame
     int downtubeLength = 50;
     int numForks = 2;
     int bottomBracketLength = 789;
-
-    struct Headtube
-    {
-        int frontFrameLength = 10;
-        std::string brand = "Slazenger";
-        int bottomFileCircumference = 30;
-        double compressionRingDiameter = 28.6;
-        bool hasLid = true;
-    };
     
 //3 things it can do:
     //1) hold wheels in place
+    void secureWheel();
     //2) connect to saddle
+    void connectToSaddle();
     //3) route brake cables
+    void routeCables();
 };
 /*
 
@@ -459,19 +440,17 @@ struct Wheels
     float tireTread = 2.2f;
     int tireBrand = 1664;
 
-    struct WheelHub
-    {
-        int axelLength = 121;
-        int axelDiameter = 12;
-        double axelWeight = 0.3;
-        std::string axelBrand = "RXR";
-        bool hasSpring = true;
-    };
-
 //3 things it can do:
     //1) rotate forwards
+    int rotateForwards();
+    // return number of forward rotations
+
     //2) change direction
+    void changeDirection();
+
     //3) rotate backwards
+    int rotateBackwards();
+    //return number of backwards rotations  
 };
 /*
 Thing 9) Bell
@@ -492,18 +471,13 @@ struct Bell
     float bellWeight = 6.f;
     int numMovingParts = 54;
 
-    struct BellBase
-    {
-    int baseWidth = 3;
-    std::string baseMaterial = "Rubber";
-    std::string baseColour = "Black";
-    double baseWeight = 1.1;
-    };
-
-//3 things it can do:
+    //3 things it can do:
     //1) make sound
+    void makeSound();
     //2) shine in the sun
+    void shineInSun();
     //3) rotate clockwise
+    void rotateClockwise();
 };
 
 //Thing 10
