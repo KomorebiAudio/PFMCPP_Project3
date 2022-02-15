@@ -270,9 +270,9 @@ struct Elevator
 //3 things it can do:
 
     //1) go up
-    void goUp(Elevator);
+    void goUp();
     //2) go down
-    void goDown(Elevator);
+    void goDown();
     //3) open doors
     bool doorsOpen(ElevatorDoors);
     // returns true or false
@@ -302,11 +302,11 @@ struct Motorbike
 //3 things it can do:
 
     //1) accelerate
-    void accelerate (Motorbike);
+    void accelerate();
     //2) brake 
-    void brake (Motorbike);
+    void brake();
     //3) change gear
-    int changeGear (Motorbike);
+    int changeGear();
 }; 
 /*
 
@@ -360,19 +360,20 @@ struct Saddle
     int colour = 222;
     double saddleWeight = 4.5;
 
-        struct SaddleMaterial
+    struct SaddleMaterial
     {
         bool isLeather = true;
         bool isTan = true;
         std::string leatherSource = "Cow";
     };  
+
     //3 things it can do:
     //1) support rider
-    void supportRider(Saddle);
+    void supportRider();
     //2) cushion butt
-    void cushionButt(Saddle);
+    void cushionButt();
     //3) look cool
-    void lookCool(Saddle);  
+    void lookCool();  
 };
 /*
 
@@ -426,11 +427,11 @@ struct Frame
     
 //3 things it can do:
     //1) hold wheels in place
-    void secureWheel(Frame);
+    void secureWheel();
     //2) connect to saddle
-    void connectToSaddle(Frame);
+    void connectToSaddle();
     //3) route brake cables
-    void routeCables(Frame);
+    void routeCables();
 };
 /*
 
@@ -454,12 +455,12 @@ struct Wheel
 
 //3 things it can do:
     //1) rotate forwards
-    int rotateForwards(Wheel);
+    int rotateForwards();
     // return number of forward rotations
     //2) change direction
-    void changeDirection(Wheel);
+    void changeDirection();
     //3) rotate backwards
-    int rotateBackwards(Wheel);
+    int rotateBackwards();
     //return number of backwards rotations  
 };
 /*
@@ -483,33 +484,38 @@ struct Bell
 
     //3 things it can do:
     //1) make sound
-    void makeSound(Bell);
+    void makeSound();
     //2) shine in the sun
-    void shineInSun(Bell);
+    void shineInSun();
     //3) rotate clockwise
-    void rotateClockwise(Bell);
+    void rotateClockwise();
 };
 
 //Thing 10
 /*
-
  */
  
 struct Bicycle
 {
-
-//Thing 10) Bicycle
-//5 properties: 
+    //Thing 10) Bicycle
+    //5 properties: 
     //1) Saddle 
     //2) Gears
     //3) Size of frame
     //4) Wheels
     //5) Bell
-
+    Saddle saddle;
+    Gears gears;
+    Frame frame;
+    Wheel wheel;
+    Bell bell;
 //3 things it can do:
     //1) Rotate pedals
+    void rotatePedals();
     //2) Adjust saddle height
-    //3) Change gears
+    void adjustSaddleHeight();
+    //3) Change gear
+    void changeGear();
 };
 
 
