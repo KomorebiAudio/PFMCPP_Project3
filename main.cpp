@@ -218,7 +218,9 @@ struct Airport
         
         void checkWheels();
         void cleanInterior();
-        double weighRubbishCollected(double amountOfRubbishInKG = 10.5);
+        double weighRubbishCollected(double 
+        amountOfRubbishInKG = 10.5);
+        //returns amount of rubbish collected
     };
 
 //3 things it can do:
