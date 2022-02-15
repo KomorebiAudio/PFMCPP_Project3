@@ -274,8 +274,10 @@ struct Elevator
     //2) go down
     void goDown();
     //3) open doors
-    bool doorsOpen(ElevatorDoors);
+    bool doorsOpen(bool useFront);
     // returns true or false
+
+    ElevatorDoors frontDoors, rearDoors;
 };
 
 /*
@@ -354,10 +356,10 @@ struct Bird
 
 struct Saddle 
 {
-    int cushionAmount = 3;
-    int saddleWidth = 5;
-    int saddleHeight = 3;
-    int colour = 222;
+    int cushionAmount = 3; //0x00
+    int saddleWidth = 5;    //0x04
+    int saddleHeight = 3; //0x08
+    int colour = 222;        //0x0B
     double saddleWeight = 4.5;
 
     struct SaddleMaterial
@@ -372,8 +374,10 @@ struct Saddle
     void supportRider();
     //2) cushion butt
     void cushionButt();
-    //3) look cool
-    void lookCool();  
+    //3) change material
+    void changeMaterial(SaddleMaterial);  
+
+    SaddleMaterial existingSaddleMaterial;
 };
 /*
 
@@ -398,11 +402,11 @@ struct Gears
 //3 things it can do:
 
     //1) change between speeds
-    void changeBetweenSpeeds(Gears);
+    void changeBetweenSpeeds(int newSpeed);
     //2) derail chain
-    void derailChain(Gears);
+    void derailChain();
     //3) rotate forwards
-    int rotateForwards(Gears);
+    int rotateForwards(float rotationAmount);
     // return number of rotations
 };
 
