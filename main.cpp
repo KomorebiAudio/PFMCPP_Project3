@@ -215,15 +215,23 @@ struct Airport
         int year = 2016;
         std::string manufacturer = "Boeing";
         std::string model = "747";
+        
+        void checkWheels();
+        void cleanInterior();
+        double weighRubbishCollected(double amountOfRubbishInKG = 10.5);
     };
 
 //3 things it can do:
 
     //1) check in passengers
+    int checkInPassengers (int numPassengers);
+    // returns number of passengers checked in
     //2) store planes
+    void storePlanes();
     //3) sell overpriced food
-    
+    void sellOverpricedFood();
 };
+
 /*
 
  */
@@ -244,16 +252,6 @@ struct Elevator
     int speedMPH = 60;
     double speedDoorsClose = 1.6; 
 
-//3 things it can do:
-
-    //1) go up
-    void goUp ();
-    //2) go down
-    void goDown ();
-    //3) open doors
-    bool doorsOpen ();
-    // returns true or false
-
     struct ElevatorDoors
     {
         int doorHeight = 220;
@@ -261,8 +259,21 @@ struct Elevator
         double doorWeight = 10.1;
         std::string brand = "WeLift";
         std::string holdingCompanyName = "TaxHavenLLC";
-    };
 
+        void getStuckOpen();
+        void getStuckClosed();
+        void trapFingers();
+    };
+    
+//3 things it can do:
+
+    //1) go up
+    void goUp(Elevator);
+    //2) go down
+    void goDown(Elevator);
+    //3) open doors
+    bool doorsOpen(ElevatorDoors);
+    // returns true or false
 };
 
 /*
@@ -289,12 +300,11 @@ struct Motorbike
 //3 things it can do:
 
     //1) accelerate
-    void accelerate ();
+    void accelerate (Motorbike);
     //2) brake 
-    void brake ();
+    void brake (Motorbike);
     //3) change gear
-    void changeGear ();
-
+    int changeGear (Motorbike);
 }; 
 /*
 
@@ -319,11 +329,12 @@ struct Bird
 //3 things it can do:
 
     //1) fly
-    void flyInSky();
+    void flyInSky(Bird);
     //2) build nest
-    void buildNest();
+    void buildNest(Bird);
     //3) lay eggs 
-    bool layEggs();
+    bool layEggs(Bird);
+    //returns if eggs were laid or not
 };
 
 /*
@@ -346,21 +357,20 @@ struct Saddle
     int saddleHeight = 3;
     int colour = 222;
     double saddleWeight = 4.5;
-    
-//3 things it can do:
-    //1) support rider
-    void supportRider();
-    //2) cushion butt
-    void cushionButt();
-    //3) look cool
-    void lookCool();
 
         struct SaddleMaterial
     {
         bool isLeather = true;
         bool isTan = true;
         std::string leatherSource = "Cow";
-    };    
+    };  
+    //3 things it can do:
+    //1) support rider
+    void supportRider(Saddle);
+    //2) cushion butt
+    void cushionButt(Saddle);
+    //3) look cool
+    void lookCool(Saddle);  
 };
 /*
 
@@ -385,11 +395,11 @@ struct Gears
 //3 things it can do:
 
     //1) change between speeds
-    void changeBetweenSpeeds();
+    void changeBetweenSpeeds(Gears);
     //2) derail chain
-    void derailChain();
+    void derailChain(Gears);
     //3) rotate forwards
-    int rotateForwards();
+    int rotateForwards(Gears);
     // return number of rotations
 };
 
@@ -414,11 +424,11 @@ struct Frame
     
 //3 things it can do:
     //1) hold wheels in place
-    void secureWheel();
+    void secureWheel(Frame);
     //2) connect to saddle
-    void connectToSaddle();
+    void connectToSaddle(Frame);
     //3) route brake cables
-    void routeCables();
+    void routeCables(Frame);
 };
 /*
 
@@ -432,7 +442,7 @@ struct Frame
     //4) tire tread in mm (float)
     //5) brand of tire int (int)
 
-struct Wheels
+struct Wheel
 {   
     double tirePSI = 45.6;
     int rimCircumference = 123;
@@ -442,14 +452,12 @@ struct Wheels
 
 //3 things it can do:
     //1) rotate forwards
-    int rotateForwards();
+    int rotateForwards(Wheel);
     // return number of forward rotations
-
     //2) change direction
-    void changeDirection();
-
+    void changeDirection(Wheel);
     //3) rotate backwards
-    int rotateBackwards();
+    int rotateBackwards(Wheel);
     //return number of backwards rotations  
 };
 /*
@@ -473,11 +481,11 @@ struct Bell
 
     //3 things it can do:
     //1) make sound
-    void makeSound();
+    void makeSound(Bell);
     //2) shine in the sun
-    void shineInSun();
+    void shineInSun(Bell);
     //3) rotate clockwise
-    void rotateClockwise();
+    void rotateClockwise(Bell);
 };
 
 //Thing 10
