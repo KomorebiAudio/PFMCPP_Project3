@@ -228,10 +228,11 @@ struct Airport
     //1) check in passengers
     int checkInPassengers (int numPassengers);
     // returns number of passengers checked in
-    //2) store planes
-    void storePlanes();
-    //3) sell overpriced food
-    void sellOverpricedFood();
+    //2) store plane
+    void storePlane(Aeroplane aeroplaneA);
+    //3) sell overpriced Sandwiches
+    int sellOverpricedWater(int numBottlesSold);
+    // returns amount of water bottles sodl
 };
 
 /*
@@ -269,10 +270,10 @@ struct Elevator
     
 //3 things it can do:
 
-    //1) go up
-    void goUp();
+    //1) jam doors
+    void jamDoors(bool rearDoors);
     //2) go down
-    void goDown();
+    void move(bool goDown);
     //3) open doors
     bool doorsOpen(bool useFront);
     // returns true or false
@@ -304,11 +305,12 @@ struct Motorbike
 //3 things it can do:
 
     //1) accelerate
-    void accelerate();
+    float accelerate(float accelerationSpeed);
+    //return acceleration speed
     //2) brake 
     void brake();
     //3) change gear
-    int changeGear();
+    void changeGear();
 }; 
 /*
 
@@ -333,11 +335,11 @@ struct Bird
 //3 things it can do:
 
     //1) fly
-    void flyInSky(Bird);
+    void flyInSky();
     //2) build nest
-    void buildNest(Bird);
+    void buildNest();
     //3) lay eggs 
-    bool layEggs(Bird);
+    bool layEggs();
     //returns if eggs were laid or not
 };
 
@@ -403,11 +405,12 @@ struct Gears
 
     //1) change between speeds
     void changeBetweenSpeeds(int newSpeed);
+    // return new speed
     //2) derail chain
     void derailChain();
     //3) rotate forwards
-    int rotateForwards(float rotationAmount);
-    // return number of rotations
+    int rotateForwards(int rotationAmount);
+    // return rotation forward amount
 };
 
 /*
@@ -459,13 +462,13 @@ struct Wheel
 
 //3 things it can do:
     //1) rotate forwards
-    int rotateForwards();
-    // return number of forward rotations
+    float rotateForwards(float rotationAmount);
+    // return rotation forward amount
     //2) change direction
-    void changeDirection();
-    //3) rotate backwards
-    int rotateBackwards();
-    //return number of backwards rotations  
+    bool changeDirection(bool moveLeft = true);
+    //3) return the new direction
+    float rotateBackwards(float rotationAmount);
+    //return rotation backwards amount  
 };
 /*
 Thing 9) Bell
